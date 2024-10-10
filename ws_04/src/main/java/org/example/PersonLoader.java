@@ -27,7 +27,7 @@ public class PersonLoader {
     @Bean
     public Dog dog3() {
         Dog dog = new Dog();
-        dog.setName("김두부");
+        dog.setName("마루");
 
         return dog;
     }
