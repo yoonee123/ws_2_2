@@ -1,0 +1,28 @@
+스프링 AOP 실습
+1. 클래스 설계
+CommentService(Bean)
+> PrintComment(CommentInfo);
++ CommentInfo
++ String text;
++ String author;
+Main > CommentService
+>Call CommentService
+
++ Logger 사용해보기
+
+2. AOP 구성
+a. Dependency 추가
+spring-aspects
+b. Aspect 클래스 추가
+> 포인트컷 표현식
+c. Bean 구성 클래스에 Proxy 설정
+d. Aspect 클래스 구성
+> 입력값 조작하기
+> 출력값 조작하기
+
+e. 포인트컷표현식에 어노테이션 사용
+> 어노테이션 생성하기
+> 포인트컷표현식에 어노테이션 지정
+> 대상 메서드에 어노테이션 지정
+
+f. 프록시 지정하기
