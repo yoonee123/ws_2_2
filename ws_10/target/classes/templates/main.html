@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block th:if="${message != null}">
+    <h2 th:text="${message}">Here is Main</h2>
+    IF조건 만족
+</th:block>
+<th:block th:unless="${message != null}">
+    <h2>Here is Main</h2>
+    IF조건 불만족
+</th:block>
+</body>
+</html>
