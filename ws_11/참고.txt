@@ -1,0 +1,38 @@
+스르핑 부트 웹서비스 하기
+#리뷰
+1. 컨트롤러 만들기
+> 메서드 구성 및 경로 맵핑
+> @Controller
+> @RequestMapping
+> 컨트롤러 메서드 반환형 > 문자열 = 뷰네임
+2. 뷰파일 생성
+> 템플릿 엔진(Thymleaf) > resources/templates/
+
+3.[프로젝트이름]Application
+
+4. View -> Controller 데이터를 전송
+> GET 방식 QueryString
+> http://localhost:8080/main?msg=안녕하세요
+> GET 방식 PathVariable 
+> http://localhost:8080/member/[id]
+
+> POST: <form></form>, AJAX
+
+#이번시간
+(빈의)"웹스코프"
+
+1. 요청 스코프 
+2. 세션 스코프
+3. 어플리케이션 스코프
+
+. REST API 
+1. https://start.spring.io
+스프링 부트 프로젝트 초기화 해서 다운로드
+> 의존성 추가
+> Spring web (spring-boot-starter-web)
+> Thymleaf(spring-boot-starter-thymleaf)
+> IntelliJ에서 열기
+
+2. 컨트롤러 만들고 > 뷰 만들고 > 화면에 표시
+/main 경로를 서비스하도록
+> 화면에 "안녕하세요"
