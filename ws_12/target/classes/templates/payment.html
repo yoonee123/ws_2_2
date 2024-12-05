@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 요청 화면</title>
+</head>
+<body>
+<form>
+    <input type="text" name="inp-name" placeholder="이름을 입력하세요">
+    <input type="number" name="inp-amount" placeholder="이름을 입력하세요">
+    // <input type="button" value="결제요청" id="btn-payment" onclick="fn_ajax_payment()">
+    <input type="button" value="결제요청" id="btn-payment" onclick="fn_ajax_payment()">
+
+    <div>
+        <span id="lb-payment-result">결제 응답이 여기 표시됩니다.</span>
+    </div>
+</form>
+<script>
+    document.querySelector('#btn-payment")
+       .addEventListener('click', function() {
+           fn_ajax_payment();
+       });
+
+   // document.querySelector("#btn-payment").addEventListener('click', fn_ajax_payment);
+
+   function fn_ajax_payment() {
+   let name = document.querySelector("[name=int-name]").value;
+   let amount = document.querySelector("[name=int-amount]").value;
+
+   fetch("/api/payment", {
+       method: "POST",
+       // headers: {
+       //  "Content-Type": "application/json",
+       // },
+       body: JSON.stringify({
+         name: name,
+         amount: amount
+       }),
+     })
+        .then(response=>response.json())
+
+     .then(response => {
+         console.log(response)
+
+         document.querySelector('#lb-payment-result').innerHTML = response.msg;
+     );}
+
+</script>
+</body>
+</html>
+
